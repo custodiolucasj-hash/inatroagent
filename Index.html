@@ -1,0 +1,264 @@
+
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>INATROAGENTMZ - Agendamento de Exames de Condução</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="CSS/css.css">
+    <link rel="stylesheet" href="JS/js.js">
+    </head>
+<body>
+    
+    <header>
+        <div class="container header-content">
+            <div class="logo">
+                <div class="logo-icon">
+                    <i class="fas fa-car"></i>
+                </div>
+                <h1>INATRO<span>AGENT</span>MZ</h1>
+            </div>
+            
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <i class="fas fa-bars"></i>
+            </button>
+            
+            <nav id="mainNav">
+                <ul>
+                    <li><a href="#home"><i class="fas fa-home"></i> Início</a></li>
+                    <li><a href="#agendamento"><i class="fas fa-calendar-check"></i> Agendamento</a></li>
+                    <li><a href="#escolas"><i class="fas fa-school"></i> Escolas</a></li>
+                    <li><a href="#contactos"><i class="fas fa-phone"></i> Contactos</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+   <section class="hero" id="home">
+        <div class="container hero-content">
+            <h2>Agendamento de Exames de Condução em Moçambique</h2>
+            <p>Simplificamos o processo de agendamento de exames teóricos e práticos para todas as escolas de condução do país. Gestão centralizada, relatórios detalhados e acompanhamento em tempo real.</p>
+            <div class="hero-btns">
+                <button class="btn btn-primary" id="agendarBtn">
+                    <i class="fas fa-calendar-alt"></i> Agendar Exame
+                </button>
+                <button class="btn btn-secondary" id="escolaBtn">
+                    <i class="fas fa-school"></i> Registrar Escola
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <section class="agendamento" id="agendamento">
+        <div class="container">
+            <div class="section-title">
+                <h2>Agendar Exame de Condução</h2>
+                <p>Preencha o formulário para agendar seu exame teórico ou prático de forma rápida e eficiente</p>
+            </div>
+            
+            <div class="agendamento-container">
+                <div class="agendamento-form">
+                    <h3 class="form-title">
+                        <i class="fas fa-file-alt"></i> Dados para Agendamento
+                    </h3>
+                    
+                    <form id="agendamentoForm">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="nome">Nome Completo *</label>
+                                <input type="text" id="nome" class="form-control" placeholder="Seu nome completo" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="bi">Número do BI *</label>
+                                <input type="text" id="bi" class="form-control" placeholder="Número do Bilhete de Identidade" required>
+                            </div>
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="telefone">Telefone *</label>
+                                <input type="tel" id="telefone" class="form-control" placeholder="+258 84 000 0000" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="email">E-mail</label>
+                                <input type="email" id="email" class="form-control" placeholder="seu@email.com">
+                            </div>
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="escola">Escola de Condução *</label>
+                                <select id="escola" class="form-control" required>
+                                    <option value="">Selecione a escola</option>
+                                    <option value="Escola de Condução Maputo">Escola de Condução Maputo</option>
+                                    <option value="Auto-Escola Beira">Auto-Escola Beira</option>
+                                    <option value="Escola de Condução Nampula">Escola de Condução Nampula</option>
+                                    <option value="Centro de Formação de Condutores Tete">Centro de Formação de Condutores Tete</option>
+                                    <option value="Auto-Escola Gaza">Auto-Escola Gaza</option>
+                                </select>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="tipo-exame">Tipo de Exame *</label>
+                                <select id="tipo-exame" class="form-control" required>
+                                    <option value="">Selecione o tipo</option>
+                                    <option value="Teórico">Exame Teórico</option>
+                                    <option value="Prático">Exame Prático</option>
+                                    <option value="Ambos">Teórico e Prático</option>
+                                </select>
+                            </div>
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="data">Data Pretendida *</label>
+                                <input type="date" id="data" class="form-control" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="categoria">Categoria *</label>
+                                <select id="categoria" class="form-control" required>
+                                    <option value="">Selecione a categoria</option>
+                                    <option value="A">Categoria A (Motociclos)</option>
+                                    <option value="B">Categoria B (Ligeiros)</option>
+                                    <option value="C">Categoria C (Pesados)</option>
+                                    <option value="D">Categoria D (Passageiros)</option>
+                                    <option value="E">Categoria E (Reboques)</option>
+                                </select>
+                            </div>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary btn-block">
+                            <i class="fas fa-paper-plane"></i> Submeter Agendamento
+                        </button>
+                    </form>
+                </div>
+                
+                <div class="agendamento-info">
+                    <div class="info-box">
+                        <h3><i class="fas fa-info-circle"></i> Informações Importantes</h3>
+                        <p>• Trazer documento de identificação (BI ou Passaporte) no dia do exame.</p>
+                        <p>• Chegar com 30 minutos de antecedência.</p>
+                        <p>• Pagamento deve ser efetuado antes da data do exame.</p>
+                        <p>• Em caso de desistência, notificar com 48h de antecedência.</p>
+                    </div>
+                    
+                    <div class="info-box">
+                        <h3><i class="fas fa-phone-alt"></i> Contactos de Suporte</h3>
+                        <p>• Telefone: +258 84 123 4567</p>
+                        <p>• Email: info@autoescolamz.co.mz</p>
+                        <p>• Horário: Seg-Sex (8h-17h), Sáb (8h-13h)</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="escolas" id="escolas">
+        <div class="container">
+            <div class="section-title">
+                <h2>Escolas de Condução Registadas</h2>
+                <p>Encontre a escola de condução mais próxima de si e conheça as suas informações de contacto</p>
+            </div>
+            
+            <div class="escolas-grid">
+                <div class="escola-card">
+                    <div class="escola-img">
+                        <i class="fas fa-university"></i>
+                    </div>
+                    <div class="escola-content">
+                        <h3>Escola de Condução Maputo</h3>
+                        <p>Localizada no centro da cidade, oferece formação completa para todas as categorias de condução.</p>
+                        <div class="escola-meta">
+                            <span><i class="fas fa-phone"></i> +258 84 111 2233</span>
+                            <span><i class="fas fa-users"></i> 250 alunos</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="escola-card">
+                    <div class="escola-img">
+                        <i class="fas fa-university"></i>
+                    </div>
+                    <div class="escola-content">
+                        <h3>Auto-Escola Beira</h3>
+                        <p>Com mais de 15 anos de experiência, especializada em formação para condutores profissionais.</p>
+                        <div class="escola-meta">
+                            <span><i class="fas fa-phone"></i> +258 84 222 3344</span>
+                            <span><i class="fas fa-users"></i> 180 alunos</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="escola-card">
+                    <div class="escola-img">
+                        <i class="fas fa-university"></i>
+                    </div>
+                    <div class="escola-content">
+                        <h3>Escola de Condução Nampula</h3>
+                        <p>Infraestrutura moderna com pista própria para exames práticos e simuladores de condução.</p>
+                        <div class="escola-meta">
+                            <span><i class="fas fa-phone"></i> +258 84 345 4455</span>
+                            <span><i class="fas fa-users"></i> 10 alunos</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+   <footer id="contactos">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>AutoEscolaMZ</h3>
+                    <p>Sistema oficial de agendamento de exames de condução e gestão de escolas de condução em Moçambique.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Links Rápidos</h3>
+                    <ul class="footer-links">
+                        <li><a href="#home">Início</a></li>
+                        <li><a href="#agendamento">Agendar Exame</a></li>
+                        <li><a href="#escolas">Escolas de Condução</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Contactos</h3>
+                    <div class="contact-info">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>Av. 5 de Setembro, nº 1234, Maputo, Moçambique</span>
+                    </div>
+                    <div class="contact-info">
+                        <i class="fas fa-phone"></i>
+                        <span>+258 84 123 4567</span>
+                    </div>
+                    <div class="contact-info">
+                        <i class="fas fa-envelope"></i>
+                        <span>info@inatroagentmz.co.mz</span>
+                    </div>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Horário de Atendimento</h3>
+                    <p>Segunda a Sexta: 8h00 - 17h00</p>
+                    <p>Sábado: 8h00 - 13h00</p>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p>&copy; WINTERTECH- Sistema de Agendamento de Exames de Condução. Todos os direitos reservados.</p>
+               
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
